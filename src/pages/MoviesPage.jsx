@@ -20,10 +20,10 @@ export default function MoviesPage() {
 
     return (
         <>
-            <div className="container d-flex justify-content-center py-4">
-            <h1>List of all movies</h1>
+            <div className="container d-flex justify-content-center mt-5 py-4">
+            <h1>Elenco di tutti i film</h1>
             </div>
-            <div className="py-3 container">
+            <div className="py-2 container">
                 <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-3">
                     {movies.map((movie) => (
                         <div className="col" key={movie.id}> {/* Uso di map per stampare dinamicamente i films */}

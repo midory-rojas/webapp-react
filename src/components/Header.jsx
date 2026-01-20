@@ -16,7 +16,7 @@ export default function Header({ nameApp }) { //nameAPP viene pasatto attraverso
         },
     ];
     return (
-        <header>
+        <header className="fixed-top">
             <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
                 <div className="container-fluid">
                     {/*   Condizione ternario per fare la condizione del Movie App

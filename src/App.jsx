@@ -4,6 +4,7 @@ import Home from "./pages/Home"; //Importo Home
 import MoviesPage from "./pages/MoviesPage"; //Importo MoviesPage
 import About from "./pages/About"; //Importo About
 import DetailsSingleMovie from "./pages/DetailsSingleMovie";
+import NotFound from "./pages/NotFound";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route element={<About />} path="/about"/>
             <Route element={<MoviesPage />} path="/movies" />
             <Route element={<DetailsSingleMovie/>} path="/movies/:id"/>
+            <Route element={<NotFound/>} path="*"/>
           </Route>
         </Routes>
       </BrowserRouter>

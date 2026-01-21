@@ -3,6 +3,7 @@ import AppLayout from "./layouts/AppLayout"; //Importo AppLayout
 import Home from "./pages/Home"; //Importo Home
 import MoviesPage from "./pages/MoviesPage"; //Importo MoviesPage
 import About from "./pages/About"; //Importo About
+import DetailsSingleMovie from "./pages/DetailsSingleMovie";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route element={<Home />} path="/"/>
             <Route element={<About />} path="/about"/>
             <Route element={<MoviesPage />} path="/movies" />
+            <Route element={<DetailsSingleMovie/>} path="/movies/:id"/>
           </Route>
         </Routes>
       </BrowserRouter>

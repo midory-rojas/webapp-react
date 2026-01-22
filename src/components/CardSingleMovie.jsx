@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import ReviewsCard from "./ReviewsCard";
+import ReviewForm from "./ReviewForm";
 
 export default function CardSingleMovie({ movie }) {
     const { image, title, genre, director, abstract, release_year } = movie;
@@ -8,9 +9,11 @@ export default function CardSingleMovie({ movie }) {
 
     //Funzione per andare avanti con il bottone
     function next(event) {
-        const prossimoId = parseInt(id) + 1;
+        const prossimoId = parseInt(movie.id) + 1;
         navigate(`/movies/${prossimoId}`);
     };
+
+    
     return (
         <>
             <div className="container py-3">
@@ -38,6 +41,14 @@ export default function CardSingleMovie({ movie }) {
                     }
                     </div>
                 </div>
+                <section className="container py-5">
+                    <div className="row">
+                        <div className="col-12 col-md-6">
+                    <h2>Lascia una review</h2> 
+                    <ReviewForm movieId={movie.id} /> {/* Importo il ReviewForn che ho creato */}
+                    </div>
+                    </div>
+                </section>
             </div>
 
 

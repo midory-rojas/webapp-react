@@ -18,7 +18,7 @@ function App() {
             <Route element={<Home />} path="/"/>
             <Route element={<About />} path="/about"/>
             <Route element={<MoviesPage />} path="/movies" />
-            <Route element={<DetailsSingleMovie/>} path="/movies/:id"/>
+            <Route element={<DetailsSingleMovie/>} path="/movies/:slug"/> {/* modifica lo slug per l'id nel route */}
             <Route element={<NotFound/>} path="*"/>
           </Route>
         </Routes>

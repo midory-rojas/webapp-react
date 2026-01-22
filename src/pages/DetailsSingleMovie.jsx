@@ -7,7 +7,7 @@ import ReviewsCard from "../components/ReviewsCard";
 
 
 export default function DetailsSingleMovie({ }) {
-    const { id } = useParams();
+    const { slug } = useParams(); //Modifica del id per lo slug
     const [movie, setMovie] = useState(null);
     const navigate = useNavigate();
     //Uso il lick creato per fare la chiamata API
@@ -15,24 +15,23 @@ export default function DetailsSingleMovie({ }) {
 
 
     useEffect(() => {
-        axios.get(`${backendBaseUrl}/api/movies/${id}`).then((resp) => {
+        axios.get(`${backendBaseUrl}/api/movies/${slug}`).then((resp) => { //Modifica della chiamata API per lo slug
             console.log(resp)
             setMovie(resp.data);
         })
             .catch((err) => {
                 console.log(err)
             });
-    }, [id])
+    }, [slug]) //Modifica della dipendenza per lo slug
     return (
         <>
             <div className="container d-flex mt-5 pt-3">
-                <h1>Movie {id}</h1>
+                <h1>Dettagli del film</h1>
             </div>
             <div>
                 {movie !== null &&
                     <CardSingleMovie movie={movie} />
                 }
-               
             </div>
             <div>
             </div>

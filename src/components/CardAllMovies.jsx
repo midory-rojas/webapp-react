@@ -8,7 +8,7 @@ export default function CardAllMovies({ movie}) { //Creazione di componente Card
             <div className="card-body">
                 <h4>{title}</h4>
                 <h5>Director: {director}</h5>
-                <Link to={`/movies/${movie.id}`} className="btn btn-dark">Vedi detagli</Link>
+                <Link to={`/movies/${movie.slug}`} className="btn btn-dark">Vedi detagli</Link>{/*  Modifica di movie.id per movie.slug */}
             </div>
         </div>
     )

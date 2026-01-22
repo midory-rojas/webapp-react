@@ -21,6 +21,18 @@ h1 {
 h2 {
      color: rgb(177, 173, 168);
 }
+h4 {
+    color: rgb(120, 87, 137);
+}
+h5 {
+    color:rgb(65, 63, 61);
+}
+
+
+.bg-purple {
+    background-color: rgb(209, 196, 221);
+    border: 1px solid rgb(47, 47, 131);
+}
 
 
 

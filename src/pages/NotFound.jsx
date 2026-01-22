@@ -4,7 +4,6 @@ export default function NotFound() {
     const navigate = useNavigate();
 
     //Funzione per tornare a Home
-
     function goHome(event) {
         event.preventDefault();
         navigate("/");
@@ -15,7 +14,7 @@ export default function NotFound() {
                 <h1>Error 404: Pagina non trovata</h1>
             </section>
             <div className="d-flex justify-content-center">
-                <a className="btn btn-dark" onClick={goHome} href="">Ritorna</a>
+                <a className="btn btn-dark" onClick={goHome} href="">Ritorna a Home</a>
             </div>
         </>
     );
